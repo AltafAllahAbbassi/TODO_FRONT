@@ -1,4 +1,3 @@
-<p [hidden]="isHidden" [style.color]="color" (click)="sayHello()">
-  first works!
-</p>
-<button (mouseenter)="hideShow()">Hide</button>
+<input #divColor placeholder="Choisir une couleur"  (change)="changeDivColor(divColor.value)"/>
+<div [style.color]="color">Bonjour les GL4</div>
+<Button class="btn btn-success" (click)="resetDivColor()">Reset Color</Button>
