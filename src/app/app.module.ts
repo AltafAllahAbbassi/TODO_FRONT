@@ -14,6 +14,7 @@ import { NgStyleComponent } from './directives/ng-style/ng-style.component';
 import { WordComponent } from './directives/word/word.component';
 import { HightlightDirective } from './directives/hightlight.directive';
 import { TestDirectiveComponent } from './directives/test-directive/test-directive.component';
+import { RandomStringPipe } from './pipes/random-string.pipe';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { TestDirectiveComponent } from './directives/test-directive/test-directi
     NgStyleComponent,
     WordComponent,
     HightlightDirective,
-    TestDirectiveComponent
+    TestDirectiveComponent,
+    RandomStringPipe
   ],
   imports: [
     BrowserModule,
