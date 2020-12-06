@@ -10,6 +10,10 @@ import { TwoComponent } from './components/two/two.component';
 import { CardComponent } from './components/card/card.component';
 import { PereComponent } from './components/pere/pere.component';
 import { FilsComponent } from './components/fils/fils.component';
+import { ListComponent } from './components/list/list.component';
+import { ListItemComponent } from './components/list-item/list-item.component';
+import { ItemDetailComponent } from './components/item-detail/item-detail.component';
+import { CvComponent } from './components/cv/cv.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,11 @@ import { FilsComponent } from './components/fils/fils.component';
     TwoComponent,
     CardComponent,
     PereComponent,
-    FilsComponent
+    FilsComponent,
+    ListComponent,
+    ListItemComponent,
+    ItemDetailComponent,
+    CvComponent
   ],
   imports: [
     BrowserModule,

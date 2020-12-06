@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Person } from 'src/app/models/person';
 
 @Component({
   selector: 'app-card',
@@ -6,14 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
-
-  name="abbassi"
-  firstName="altaf allah"
-  age=21
-  path ="aaa.jpg";
+@Input()
+person:Person
   constructor() { }
 
   ngOnInit(): void {
+    this.person=new Person(1,"ABBASSI","Altaf Allah","aaa.jpg",21)
   }
 
 }
