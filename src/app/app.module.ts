@@ -10,6 +10,8 @@ import { TwoComponent } from './components/two/two.component';
 import { CardComponent } from './components/card/card.component';
 import { PereComponent } from './components/pere/pere.component';
 import { FilsComponent } from './components/fils/fils.component';
+import { NgStyleComponent } from './directives/ng-style/ng-style.component';
+import { WordComponent } from './directives/word/word.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { FilsComponent } from './components/fils/fils.component';
     TwoComponent,
     CardComponent,
     PereComponent,
-    FilsComponent
+    FilsComponent,
+    NgStyleComponent,
+    WordComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,28 @@
+<div class="row">
+  Color: <input class="mx-4" type="color" [(ngModel)]="color" /> Size:
+  <input class="mx-4" type="number" [(ngModel)]="size"  /> Police
+  <select class="mx-4" [(ngModel)]="family" >
+    <option value="garamand">Garamand</option>
+    <option value="arial">Arial</option>
+    <option value="verdana">Verdana</option>
+  </select>
+  Justify:
+          <i class="fa fa-align-left p-1" (click)="changeAlign('left')"></i>
+          <i class="fa fa-align-center p-1" (click)="changeAlign('center')"></i>
+          <i class="fa fa-align-right p-1" (click)="changeAlign('right')"></i>
+          <i class="fa fa-align-justify p-1" (click)="changeAlign('justify')"></i>
+
+</div>
+<div class="pt-4">
+  <p
+    class="p-2 border mx-2 border-secondary rounded "
+    [ngStyle]="{
+      'color': color,
+      'font-size': size +'px',
+      'font-family':family,
+      'text-align':align
+    }"
+  >
+    Bnjour les GL4 , Mini app Word
+  </p>
+</div>
