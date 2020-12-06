@@ -12,6 +12,8 @@ import { PereComponent } from './components/pere/pere.component';
 import { FilsComponent } from './components/fils/fils.component';
 import { NgStyleComponent } from './directives/ng-style/ng-style.component';
 import { WordComponent } from './directives/word/word.component';
+import { HightlightDirective } from './directives/hightlight.directive';
+import { TestDirectiveComponent } from './directives/test-directive/test-directive.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { WordComponent } from './directives/word/word.component';
     PereComponent,
     FilsComponent,
     NgStyleComponent,
-    WordComponent
+    WordComponent,
+    HightlightDirective,
+    TestDirectiveComponent
   ],
   imports: [
     BrowserModule,
