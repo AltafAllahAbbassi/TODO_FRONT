@@ -12,7 +12,7 @@ person:Person
   constructor() { }
 
   ngOnInit(): void {
-    this.person=new Person(1,"ABBASSI","Altaf Allah","aaa.jpg",21)
+    this.person=null
   }
 
 }
