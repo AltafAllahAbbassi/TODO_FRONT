@@ -16,7 +16,7 @@ export class ListComponent implements OnInit {
 
   ngOnInit(): void {
     this.persons=[
-      new Person(1,"ABBASSI","Altaf Allah","aaa.jpg",21),
+      new Person(1,"ABBASSI","Altaf Allah","",21),
       new Person(2,"ABBASSI","Mohamed Ayoub","ayoub.jpg",23)
 
     ]

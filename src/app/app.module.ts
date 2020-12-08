@@ -15,6 +15,7 @@ import { ListItemComponent } from './components/list-item/list-item.component';
 import { ItemDetailComponent } from './components/item-detail/item-detail.component';
 import { CvComponent } from './components/cv/cv.component';
 import { NgifComponent } from './representational/ngif/ngif.component';
+import { ImagePipePipe } from './pipes/image-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { NgifComponent } from './representational/ngif/ngif.component';
     ListItemComponent,
     ItemDetailComponent,
     CvComponent,
-    NgifComponent
+    NgifComponent,
+    ImagePipePipe
   ],
   imports: [
     BrowserModule,
