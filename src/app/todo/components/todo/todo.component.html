@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col">
+    <ul class="list-group ">
+
+        <div *ngFor="let todo of todos" class="row text-center align-items-center" >
+          <li class="list-group-item my-2 rounded col-9 text-left">
+            {{todo.name}} {{todo.content}}
+          </li>
+          <i class="fa fa-trash fa-3x px-3 " style="color: red;" (click)="deleteTodo()"></i>
+        </div>
+
+
+
+
+    </ul>
+
+  </div>
+  <div class="col ">
+    Name <input type="text" class="form-control" [(ngModel)]="todo.name">
+    Content <input type="text" class="form-control" [(ngModel)]="todo.content">
+    <div class="text-center">
+      <button class="mt-4 btn btn-primary "(click)="addTodo()"
+      [disabled]="!todo.content.trim().length ||!todo.name.trim().length "
+       >
+        Add Todo
+      </button>
+    </div>
+
+  </div>
+
+</div>
