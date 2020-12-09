@@ -1,0 +1,17 @@
+<div *ngIf="embauches.length">
+  <div class="font-weight-bold">
+    Liste des embauches :
+  </div>
+
+  <div class="border border-primary rounded p-2 m-2">
+    <span *ngFor="let embauche of embauches">
+      {{ embauche.firstName }} {{ embauche.name }}
+      <img
+        class="rounded-circle"
+        height="30px"
+        width="30px"
+        src="../../../assets/images/{{ embauche.path }}"
+      />
+    </span>
+  </div>
+</div>
