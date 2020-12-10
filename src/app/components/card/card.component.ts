@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { CvService } from 'src/app/cv/service/cv.service';
 import { EmbaucheService } from 'src/app/embauche/components/services/embauche.service';
 import { Person } from 'src/app/models/person';
 
@@ -10,10 +11,13 @@ import { Person } from 'src/app/models/person';
 export class CardComponent implements OnInit {
 @Input()
 person:Person
-  constructor(private embaucheService:EmbaucheService) { }
+  constructor(private embaucheService:EmbaucheService,private cvService:CvService) { }
 
   ngOnInit(): void {
     this.person=null
+    this.cvService.selectPersoenSubject.subscribe(
+      (person)=>this.person=person
+    )
   }
 
   embaucher(){

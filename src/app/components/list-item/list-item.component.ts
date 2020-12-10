@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { CvService } from 'src/app/cv/service/cv.service';
 import { Person } from 'src/app/models/person';
 
 @Component({
@@ -12,12 +13,13 @@ export class ListItemComponent implements OnInit {
 person:Person
 @Output()
 selectedPerson=new EventEmitter();
-  constructor() { }
+  constructor(private cvService:CvService) { }
 
   ngOnInit(): void {
   }
   handlePersonClick(){
-    this.selectedPerson.emit(this.person)
+  // this.selectedPerson.emit(this.person)
+  this.cvService.selectPerson(this.person)
   }
 
 

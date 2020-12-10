@@ -8,13 +8,14 @@ import { Person } from 'src/app/models/person';
 })
 export class CvComponent implements OnInit {
 
-  catchedPerson=new Person(1,"ABBASSI","Altaf Allah","aaa.jpg",21)
+ // catchedPerson=new Person(1,"ABBASSI","Altaf Allah","aaa.jpg",21)
   constructor() { }
 
   ngOnInit(): void {
+
   }
-  catchPerson(person:Person){
+  /*catchPerson(person:Person){
     this.catchedPerson=person
   }
-
+*/
 }

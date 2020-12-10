@@ -18,10 +18,10 @@ export class ListComponent implements OnInit {
   ngOnInit(): void {
     this.persons=this.cvService.getPersons()
   }
-  forwardPerson(person){
+  /*forwardPerson(person){
     this.forwardSelectPerson.emit(person)
 
-  }
+  }*/
 
 
 }
