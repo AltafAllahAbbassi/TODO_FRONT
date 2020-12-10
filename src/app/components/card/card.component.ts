@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { distinctUntilChanged } from 'rxjs/operators';
 import { CvService } from 'src/app/cv/service/cv.service';
 import { EmbaucheService } from 'src/app/embauche/components/services/embauche.service';
 import { Person } from 'src/app/models/person';
@@ -15,7 +16,11 @@ person:Person
 
   ngOnInit(): void {
     this.person=null
-    this.cvService.selectPersoenSubject.subscribe(
+    this.cvService.selectPersoenSubject
+    .pipe(
+      distinctUntilChanged()
+    )
+    .subscribe(
       (person)=>this.person=person
     )
   }
