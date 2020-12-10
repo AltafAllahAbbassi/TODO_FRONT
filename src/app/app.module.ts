@@ -16,6 +16,9 @@ import { EmbaucheComponent } from "./embauche/components/embauche/embauche.compo
 import { NgStyleComponent } from './directives/ng-style/ng-style.component';
 import { WordComponent } from './directives/word/word.component';
 import { HightlightDirective } from './directives/hightlight.directive';
+import { LoginComponent } from './login/components/login/login.component';
+import { TestObservableComponent } from './components/test-observable/test-observable.component';
+import { RadomImageObserverComponent } from './components/radom-image-observer/radom-image-observer.component';
 
 
 @NgModule({
@@ -31,6 +34,9 @@ import { HightlightDirective } from './directives/hightlight.directive';
     NgStyleComponent,
     WordComponent,
     HightlightDirective,
+    LoginComponent,
+    TestObservableComponent,
+    RadomImageObserverComponent,
 
   ],
   imports: [
