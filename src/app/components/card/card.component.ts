@@ -27,7 +27,7 @@ person:Person
 
   embaucher(){
     if(!this.embaucheService.addEmbauche(this.person))
-    alert(this.person.firstName + " is already embauched")
+    alert(this.person.firstname + " is already embauched")
 
   }
 }

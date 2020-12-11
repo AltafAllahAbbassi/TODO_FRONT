@@ -20,6 +20,8 @@ import { LoginComponent } from './login/components/login/login.component';
 import { TestObservableComponent } from './components/test-observable/test-observable.component';
 import { RadomImageObserverComponent } from './components/radom-image-observer/radom-image-observer.component';
 
+import { ImagePipePipe } from './pipes/image-pipe.pipe';
+import {HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -37,12 +39,15 @@ import { RadomImageObserverComponent } from './components/radom-image-observer/r
     LoginComponent,
     TestObservableComponent,
     RadomImageObserverComponent,
-
+    ImagePipePipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
+
+
   ],
   providers: [],
   bootstrap: [AppComponent],

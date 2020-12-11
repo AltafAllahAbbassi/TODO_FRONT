@@ -5,11 +5,11 @@
         <img src="../../../assets/images/rotating_card_thumb2.png" />
       </div>
       <div class="user">
-        <img class="img-circle" src="../../../assets/images/{{ person.path }}" />
+        <img class="img-circle" src="../../../assets/images/{{ person.path |imagePipe }}" />
       </div>
       <div class="content">
         <div class="main">
-          <h3 class="name">{{ person.firstName }} {{ person.name }}</h3>
+          <h3 class="name">{{ person.firstname }} {{ person.name }}</h3>
           <p class="profession">{{ person.age }} YO</p>
           <p class="text-center">
             "I'm the new Sinatra, and since I made it here I can make it
