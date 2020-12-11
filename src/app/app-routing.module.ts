@@ -10,7 +10,8 @@ const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'cv',component:CvComponent},
   {path:'login',component:LoginComponent},
-  {path:'observable',component:RadomImageObserverComponent}
+  {path:'observable',component:RadomImageObserverComponent},
+  {path:'**',redirectTo:''}
 ];
 
 @NgModule({
