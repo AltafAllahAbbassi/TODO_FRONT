@@ -1,0 +1,11 @@
+    <ul class="list-group " >
+      <app-list-item
+      *ngFor=" let item of persons , let odd=odd"
+      [ngClass]="{
+        'list-group-item-secondary':odd
+      }"
+      [person]="item" ></app-list-item>
+
+    </ul>
+
+

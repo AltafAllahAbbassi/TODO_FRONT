@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { distinctUntilChanged } from 'rxjs/operators';
+import { CvService } from 'src/app/cv/service/cv.service';
+import { EmbaucheService } from 'src/app/embauche/components/services/embauche.service';
+import { Person } from 'src/app/models/person';
 
 @Component({
   selector: 'app-card',
@@ -6,14 +10,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnInit {
-
-  name="abbassi"
-  firstName="altaf allah"
-  age=21
-  path ="aaa.jpg";
-  constructor() { }
+@Input()
+person:Person
+  constructor(private embaucheService:EmbaucheService,private cvService:CvService) { }
 
   ngOnInit(): void {
+    this.person=null
+    this.cvService.selectPersoenSubject
+    .pipe(
+      distinctUntilChanged()
+    )
+    .subscribe(
+      (person)=>this.person=person
+    )
   }
 
+  embaucher(){
+    if(!this.embaucheService.addEmbauche(this.person))
+    alert(this.person.firstname + " is already embauched")
+
+  }
 }
