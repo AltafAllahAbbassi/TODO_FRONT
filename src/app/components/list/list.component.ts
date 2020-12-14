@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { CvService } from 'src/app/cv/service/cv.service';
 import { Person } from 'src/app/models/person';
 
@@ -9,7 +10,10 @@ import { Person } from 'src/app/models/person';
 })
 export class ListComponent implements OnInit {
 
-  constructor(private cvService:CvService) { }
+  constructor(
+    private cvService:CvService,
+    private toastrService:ToastrService
+    ) { }
   persons: Person[]
   @Output()
   forwardSelectPerson=new EventEmitter()
@@ -18,7 +22,10 @@ export class ListComponent implements OnInit {
   ngOnInit(): void {
   //  this.persons=this.cvService.getPersons()
   this.cvService.getPersons().subscribe(
-    (data)=>this.persons=data,
+    (data)=>{
+      this.persons=data
+      this.toastrService.success('ok')
+    },
     (error)=>this.persons=this.cvService.getFPersons()
   )
   }
