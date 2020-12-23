@@ -25,7 +25,9 @@ import { TestObservableComponent } from './components/test-observable/test-obser
 import { RadomImageObserverComponent } from './components/radom-image-observer/radom-image-observer.component';
 
 import { ImagePipePipe } from './pipes/image-pipe.pipe';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { DetailComponent } from './components/detail/detail.component';
+import { AddCvComponent } from './components/add-cv/add-cv.component'
 
 @NgModule({
   declarations: [
@@ -43,7 +45,9 @@ import {HttpClientModule} from '@angular/common/http'
     LoginComponent,
     TestObservableComponent,
     RadomImageObserverComponent,
-    ImagePipePipe
+    ImagePipePipe,
+    DetailComponent,
+    AddCvComponent
   ],
   imports: [
     BrowserModule,

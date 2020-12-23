@@ -8,12 +8,19 @@
       <li class="nav-item">
         <a class="nav-link" [routerLink]="['/cv']" routerLinkActive="active" >CV</a>
       </li>
-      <li class="nav-item">
+      <li class="nav-item" *ngIf="!auth.isAuthenticated()">
         <a class="nav-link" [routerLink]="['/login']" routerLinkActive="active" >Login</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" [routerLink]="['/observable']" routerLinkActive="active" >Test Observable</a>
       </li>
+      <li class="nav-item" *ngIf="auth.isAuthenticated()">
+        <a class="nav-link" [routerLink]="['/cv/add']" routerLinkActive="active" >Add CV</a>
+      </li>
+      <li class="nav-item" *ngIf="auth.isAuthenticated()">
+        <a class="nav-link" (click)="logout()" >Logout</a>
+      </li>
+
     </ul>
   </div>
 </nav>

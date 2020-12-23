@@ -1,7 +1,7 @@
 <form #loginForm="ngForm" class="mt-5 mx-5">
   Email<input type="text" class="form-control" ngModel name="email" email required/>
-  Password <input type="text" class="form-control" ngModel name="password" required/>
+  Password <input type="text" class="form-control" ngModel name="password" type="password" required/>
 </form>
 <div class="text-center">
-  <button class="btn btn-primary my-3" (click)="processForm(loginForm)" [disabled]="loginForm.invalid">Se connecter</button>
+  <button class="btn btn-primary my-3" (click)="login(loginForm)" [disabled]="loginForm.invalid">Se connecter</button>
 </div>
