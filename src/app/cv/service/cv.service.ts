@@ -33,11 +33,21 @@ export class CvService {
     return this.http.get<Person>(environment.api+'personnes/'+id)
   }
   deletePersonneById(id:number){
+/*
+
     const token = localStorage.getItem('token')
     //const params= new HttpParams().set('access_token',token)
     //return this.http.delete(environment.api+'personnes/'+id,{params})
     const headers = new HttpHeaders().set('Authorization',token)
     return this.http.delete(environment.api+'personnes/'+id,{headers})
+ */
+
+return this.http.delete(environment.api+'personnes/'+id)
+  }
+
+
+  addPersonne(personne: Person): Observable<Person> {
+    return this.http.post<Person>(environment.api+'/personnes', personne);
   }
 
 }

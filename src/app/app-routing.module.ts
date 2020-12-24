@@ -6,13 +6,14 @@ import { DetailComponent } from './components/detail/detail.component';
 import { HomeComponent } from './components/home/home.component';
 import { RadomImageObserverComponent } from './components/radom-image-observer/radom-image-observer.component';
 import { TestObservableComponent } from './components/test-observable/test-observable.component';
+import { AuthGaurd } from './guards/auth.guards';
 import { LoginComponent } from './login/components/login/login.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'cv',children:[
     {path:'', component:CvComponent},
-    {path:'add',component:AddCvComponent},
+    {path:'add',component:AddCvComponent,canActivate:[AuthGaurd]},
     {path:':id',component:DetailComponent},
   ]},
   {path:'login',component:LoginComponent},

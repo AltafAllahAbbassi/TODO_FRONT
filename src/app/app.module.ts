@@ -28,6 +28,7 @@ import { ImagePipePipe } from './pipes/image-pipe.pipe';
 import {HttpClientModule} from '@angular/common/http';
 import { DetailComponent } from './components/detail/detail.component';
 import { AddCvComponent } from './components/add-cv/add-cv.component'
+import { AuthHTTPInterceptor, AuthInterceptor } from './interceptors/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,7 @@ import { AddCvComponent } from './components/add-cv/add-cv.component'
 
 
   ],
-  providers: [],
+  providers: [AuthHTTPInterceptor],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
